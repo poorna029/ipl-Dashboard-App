@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import MatchCard from '../MatchCard'
+import Loader from 'react-loader-spinner'
 import './index.css'
 import LatestMatch from '../LatestMatch'
 
@@ -68,14 +69,24 @@ class TeamMatches extends Component {
     if (apiLatestMDetails === undefined || apiLatestMDetails === null) {
       return ''
     }
+    if (isLoading) {
+      return (
+        <div data-testid="loader">
+          <Loader type="TailSpin" width={50} height={50} />
+        </div>
+      )
+    }
     return (
-      <div data-testid={isLoading ? 'loader' : ''} className="team-match">
+      <div className="team-match">
         {/* first image  */}
         {/* second LatestMatch Component */}
         {/* third MatchCard */}
         <img src={team_banner_url} alt="team banner" className="banner" />
         <LatestMatch data={apiLatestMDetails} key={apiLatestMDetails.id} />
-        <ul className="match-card-container">
+        <ul
+          data-testid={isLoading ? 'loader' : ''}
+          className="match-card-container"
+        >
           {apiRecentMatches.map(p => (
             <MatchCard key={p.id} data={p} />
           ))}

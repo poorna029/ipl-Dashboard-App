@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import TeamCard from '../TeamCard'
+import Loader from 'react-loader-spinner'
 import './index.css'
 
 class Home extends Component {
@@ -26,7 +27,7 @@ class Home extends Component {
     if (isLoading) {
       return (
         <div className="bg1" data-testid="loader">
-          Loading...
+          <Loader type="Oval" height={50} width={50} />
         </div>
       )
     }

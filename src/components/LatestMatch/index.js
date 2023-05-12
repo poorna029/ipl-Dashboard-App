@@ -54,7 +54,7 @@ const LatestMatch = props => {
       {/* first container required details are:  */}
       {/* 1.secondInnings,2.date,3.venue,4.result */}
       <div className="lm-first-container">
-        <p>{secondInnings}</p>
+        <p>{competingTeam}</p>
         <p>{date}</p>
         <p>{venue}</p>
         <p>{result}</p>
@@ -67,7 +67,7 @@ const LatestMatch = props => {
       <div className="lm-second-container">
         <img
           src={competingTeamLogo}
-          alt={competingTeam}
+          alt={`latest match ${competingTeam}`}
           className="team-logo"
         />
       </div>

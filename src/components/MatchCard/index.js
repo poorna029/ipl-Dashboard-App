@@ -18,7 +18,7 @@ const MatchCard = props => {
       {/* 1.image,2.team Name,3.status ,4.result */}
       <img
         src={competingTeamLogo}
-        alt={competingTeam}
+        alt={`competing team ${competingTeam}`}
         className="competing-team-logo"
       />
       <p>{competingTeam}</p>
