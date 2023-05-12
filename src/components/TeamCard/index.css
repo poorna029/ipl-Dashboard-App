@@ -1,0 +1,23 @@
+.team-image {
+  width: 150px;
+  height: 100px;
+}
+.team-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  align-items: center;
+  padding: 10px;
+  width: 25vw;
+}
+.name {
+  text-align: center;
+  margin-left: 10px;
+}
+.button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  color: white;
+}

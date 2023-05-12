@@ -1,0 +1,36 @@
+/* Write your CSS here */
+.lm-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  margin: 10px auto;
+  width: 90vw;
+  padding: 2vw;
+  border-radius: 1vw;
+  background-color: #1e293b;
+  color: white;
+  height: auto;
+  padding-top: 5px;
+  line-height: 0.8;
+}
+.lm-first-container {
+  width: calc(90vw / 3);
+  padding-top: 20px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+}
+.lm-second-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: calc(90vw / 3);
+}
+.team-logo {
+  width: 60%;
+  height: 22vh;
+}
+.lm-third-container {
+  width: calc(90vw / 3);
+  margin-left: 2vw;
+}
